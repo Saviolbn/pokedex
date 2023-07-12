@@ -3,16 +3,12 @@ import {
   ChakraProvider,
   theme,
 } from '@chakra-ui/react';
-import { Listing } from './components/Listing';
-import { NavBar } from './components/navBar';
-const pokemons = [];
-pokemons.length = 151;
-pokemons.fill(null);
+import { Router } from './routes/Router';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Listing pokemons = {pokemons}></Listing>
+      <Router/>
     </ChakraProvider>
   );
 }
