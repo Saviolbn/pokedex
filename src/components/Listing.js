@@ -1,5 +1,6 @@
 import { Box, Center, Container, Heading, Link, LinkBox, LinkOverlay, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
+import { Link as PageLink } from 'react-router-dom'
 
 
 export const Listing = ({ pokemons }) => {
@@ -7,7 +8,7 @@ export const Listing = ({ pokemons }) => {
     
       <SimpleGrid columns={3} spacing={10} >
         {pokemons.map((icon, index) => {
-          return <LinkBox>
+          return <Link as={PageLink} to={`/pokemon/${index}`}>
             <Box
               key={index}
               bg='tomato'
@@ -15,8 +16,7 @@ export const Listing = ({ pokemons }) => {
               height='200px'
               width='300px'>
             </Box>
-            <Link  to={`#/pokemon/${index}`}></Link>
-          </LinkBox>
+          </Link>
         })}
       </SimpleGrid>
     
