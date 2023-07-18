@@ -140,13 +140,13 @@ export const Home = () => {
 
   const handleScrollEnd = () => {
     console.log(pokemonList);
-    setPokemonList([...pokemonList], ...[{
+    setPokemonList([...pokemonList, ...[{
       name: "jota",
       image: "https://www.pngmart.com/files/11/Pokemon-Bulbasaur-PNG-Pic.png",
       types: [
         "grass", "poison"
       ]
-    }])
+    }]])
     console.log(pokemonList);
   }
   return (
