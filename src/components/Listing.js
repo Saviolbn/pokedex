@@ -15,6 +15,7 @@ export const Listing = ({ pokemonList,handleScrollEnd }) => {
         next={handleScrollEnd}
         hasMore={true}>
         {pokemonList.map((pokemon, index) => {
+          console.log(pokemonList);
           return (
             <Pokemons pokemon={pokemon} index={index} />
           )

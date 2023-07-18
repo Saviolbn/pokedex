@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Listing } from '../components/Listing'
 
 export const Home = () => {
-  
+
   const [pokemonList,setPokemonList] = useState([{
     name: "Bulbasaur",
     image: "https://www.pngmart.com/files/11/Pokemon-Bulbasaur-PNG-Pic.png",
@@ -139,14 +139,15 @@ export const Home = () => {
   }]);
 
   const handleScrollEnd = () => {
-    console.log("test");
-    setPokemonList(...pokemonList, ...[{
-      name: "Bulbasaur",
+    console.log(pokemonList);
+    setPokemonList([...pokemonList], ...[{
+      name: "jota",
       image: "https://www.pngmart.com/files/11/Pokemon-Bulbasaur-PNG-Pic.png",
       types: [
         "grass", "poison"
       ]
     }])
+    console.log(pokemonList);
   }
   return (
       <Listing pokemonList ={pokemonList} handleScrollEnd={handleScrollEnd} />
