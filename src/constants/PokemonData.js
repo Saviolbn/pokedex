@@ -11,7 +11,7 @@ export const PokemonData = () => {
     id: 1
   },{
     name: "Bulbasaur",
-    image: "https://www.pngmart.com/files/11/Pokemon-Bulbasaur-PNG-Pic.png",
+    image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
     types: [
       "grass", "poison"
     ],

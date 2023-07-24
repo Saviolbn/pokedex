@@ -18,7 +18,7 @@ export const Listing = ({ pokemonList, handleScrollEnd }) => {
         {pokemonList.map((pokemon, index) => {
           console.log(pokemonList);
           return (
-            <Pokemons pokemon={pokemon} index={index} />
+            <Pokemons pokemon={pokemon} index={index+1} />
           )
         })}</SimpleGrid>
     </InfiniteScroll>

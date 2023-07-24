@@ -1,4 +1,4 @@
-import { Grid, GridItem, Image, Link, Tag } from '@chakra-ui/react'
+import { Grid, GridItem, Image, Link, ListItem, Tag, UnorderedList } from '@chakra-ui/react'
 import React from 'react'
 
 import { Link as PageLink, useParams } from 'react-router-dom';
@@ -13,33 +13,27 @@ export const DetailsGrid = ({ idPokemon }) => {
   console.log(thisPokemon)
 
   return (
-    <Grid fontSize="2xl" padding="10px"
-      h='100%'
-      templateRows='repeat(2, 1fr)'
-      templateColumns='repeat(2, 1fr)'
-      gap={2}
+    <UnorderedList
+      listStyleType="none"
+      fontSize="2xl"
     >
-      <GridItem rowSpan={1} maxW="50%" Height="50%" colSpan={1} >
+      <ListItem>
         <Image
-          // _hover={{
-          //   boxShadow: '2xl',
-          //   transition: "all .3s ease-in-out",
-          //   transform: "scale(1.2)"
-          // }}
-          maxH="100%"
+          backgroundColor="blue"
+          boxSize='50%'
           src={thisPokemon.image}
         />
-      </GridItem>
-      
-      <GridItem rowSpan={1} colSpan={1} bg='papayawhip' >
-        {thisPokemon.id}. {thisPokemon.name}<br/><br/>
-        image src:<br/> 
+      </ListItem>
+
+      <ListItem width="100%"  bg='papayawhip' >
+        {thisPokemon.id}. {thisPokemon.name}<br /><br />
+        image src:<br />
         {thisPokemon.image.toString()}
-      </GridItem>
-      <GridItem rowSpan={1} colSpan={2} bg='white' >
-        Type(s):<br/>
+      </ListItem>
+      <ListItem  bg='white' >
+        Type(s):<br />
         {thisPokemon.types.map((type, index) => {
-          
+
           return <Tag
             justifyContent="center"
             minWidth="30%"
@@ -47,8 +41,10 @@ export const DetailsGrid = ({ idPokemon }) => {
             key={`${thisPokemon.id}${type}`}
           >{type}</Tag>
         })}
-      </GridItem>
-      <GridItem display="flex"
+      </ListItem>
+      <ListItem
+        height="40px"
+        display="flex"
         alignItems="center"
         justifyContent="space-evenly"
         rowSpan={1} colSpan={2}
@@ -56,7 +52,7 @@ export const DetailsGrid = ({ idPokemon }) => {
         <Link as={PageLink} to={`/pokemon/${parseInt(idPokemon) - 1}`}>prev</Link>
         {idPokemon}
         <Link as={PageLink} to={`/pokemon/${parseInt(idPokemon) + 1}`}>next</Link>
-      </GridItem>
-    </Grid>
+      </ListItem>
+    </UnorderedList>
   )
 }
