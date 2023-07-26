@@ -9,9 +9,14 @@ export const BaseRoute = ({ children }) => {
   party.fill(null);
   
   return (
-    <Box  minHeight="100vh">
+    <Box  
+    minHeight="100vh"
+    >
       <SideBar party={party} />
-      <Box p="32px" maxW="1200px" margin="auto">
+      <Box 
+      p="32px" 
+      maxW="1200px" 
+      margin="auto">
         {children}
       </Box>
     </Box>

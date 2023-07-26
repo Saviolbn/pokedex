@@ -1,9 +1,10 @@
-import { Grid, GridItem, Image, Link, ListItem, Tag, UnorderedList } from '@chakra-ui/react'
+import { Grid, GridItem, Image, Link, ListItem, Tag, UnorderedList, css } from '@chakra-ui/react'
 import React from 'react'
 
 import { Link as PageLink, useParams } from 'react-router-dom';
 import { PokemonData } from '../constants/PokemonData';
 import { getTypeColor } from '../utils/getTypeColor';
+import { StatGraph } from './StatGraph';
 
 
 export const DetailsGrid = ({ idPokemon }) => {
@@ -12,26 +13,36 @@ export const DetailsGrid = ({ idPokemon }) => {
   const thisPokemon = pokemonList.find(thisPokemon => thisPokemon.id == idPokemon)
   console.log(thisPokemon)
 
-  return (
+  return (<div>
     <UnorderedList
+      bg='papayawhip'
+      height="100%"
       listStyleType="none"
       fontSize="2xl"
+      margin="0px"
     >
-      <ListItem>
+      <ListItem 
+      width="50%"
+      margin="auto">
         <Image
-          backgroundColor="blue"
-          boxSize='50%'
+          boxSize='100%'
           src={thisPokemon.image}
+          css={`
+                image-rendering: pixelated;
+                image-rendering: -moz-crisp-edges;
+                image-rendering: crisp-edges;
+              `}
         />
       </ListItem>
 
-      <ListItem width="100%"  bg='papayawhip' >
-        {thisPokemon.id}. {thisPokemon.name}<br /><br />
-        image src:<br />
-        {thisPokemon.image.toString()}
+      <ListItem width="100%"  >
+        {thisPokemon.id}. {thisPokemon.name}
       </ListItem>
-      <ListItem  bg='white' >
-        Type(s):<br />
+      <ListItem
+      
+      margin="auto"
+      >
+        Type(s):
         {thisPokemon.types.map((type, index) => {
 
           return <Tag
@@ -41,6 +52,13 @@ export const DetailsGrid = ({ idPokemon }) => {
             key={`${thisPokemon.id}${type}`}
           >{type}</Tag>
         })}
+      </ListItem>
+      <ListItem width="100%" >
+        image src:<br />
+        {thisPokemon.image.toString()}
+      </ListItem>
+      <ListItem width="100%" >
+        <StatGraph data ={thisPokemon}></StatGraph>
       </ListItem>
       <ListItem
         height="40px"
@@ -54,5 +72,6 @@ export const DetailsGrid = ({ idPokemon }) => {
         <Link as={PageLink} to={`/pokemon/${parseInt(idPokemon) + 1}`}>next</Link>
       </ListItem>
     </UnorderedList>
+  </div>
   )
 }

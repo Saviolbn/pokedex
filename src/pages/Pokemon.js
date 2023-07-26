@@ -9,9 +9,16 @@ export const Pokemon = () => {
   const { idPokemon } = useParams();
 
   // pokemonList.findIndex
-  return (<Box margin="auto" border='1px' h="700px" w="100%" bgColor="lightgray">
-    <DetailsGrid idPokemon={idPokemon}>
-    </DetailsGrid>
+  return (
+    <Box 
+      margin="auto"
+      border='1px'
+      h="auto"
+      w="100%"
+      bgColor="lightgray"
+    >
+      <DetailsGrid idPokemon={idPokemon}>
+      </DetailsGrid>
     </Box>
 
   )
