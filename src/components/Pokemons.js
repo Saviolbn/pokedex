@@ -32,7 +32,6 @@ export const Pokemons = ({pokemon, index}) => {
       <Link as={PageLink} to={`/pokemon/${index}`}>
         <Image
           _hover={{
-            boxShadow: '2xl',
             transition: "all .3s ease-in-out",
             animation: bounceAnimation
           }}

@@ -40,6 +40,24 @@ export const PokemonData = () => {
     types: [
       "grass", "poison"
     ],
+    abilities: [
+      {
+        "ability": {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        },
+        "is_hidden": false,
+        "slot": 1
+      },
+      {
+        "ability": {
+          "name": "chlorophyll",
+          "url": "https://pokeapi.co/api/v2/ability/34/"
+        },
+        "is_hidden": true,
+        "slot": 3
+      }
+    ],
     id: 1
   },{
     name: "Bulbasaur",
@@ -78,6 +96,24 @@ export const PokemonData = () => {
     ],
     types: [
       "grass", "poison"
+    ],
+    abilities: [
+      {
+        "ability": {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        },
+        "is_hidden": false,
+        "slot": 1
+      },
+      {
+        "ability": {
+          "name": "chlorophyll",
+          "url": "https://pokeapi.co/api/v2/ability/34/"
+        },
+        "is_hidden": true,
+        "slot": 3
+      }
     ],
     id: 2
   },{
@@ -118,6 +154,24 @@ export const PokemonData = () => {
     types: [
       "grass", "poison"
     ],
+    abilities: [
+      {
+        "ability": {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        },
+        "is_hidden": false,
+        "slot": 1
+      },
+      {
+        "ability": {
+          "name": "chlorophyll",
+          "url": "https://pokeapi.co/api/v2/ability/34/"
+        },
+        "is_hidden": true,
+        "slot": 3
+      }
+    ],
     id: 3
   },{
     name: "Bulbasaur",
@@ -156,6 +210,24 @@ export const PokemonData = () => {
     ],
     types: [
       "grass", "poison"
+    ],
+    abilities: [
+      {
+        "ability": {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        },
+        "is_hidden": false,
+        "slot": 1
+      },
+      {
+        "ability": {
+          "name": "chlorophyll",
+          "url": "https://pokeapi.co/api/v2/ability/34/"
+        },
+        "is_hidden": true,
+        "slot": 3
+      }
     ],
     id: 4
   },{
@@ -196,6 +268,24 @@ export const PokemonData = () => {
     types: [
       "grass", "poison"
     ],
+    abilities: [
+      {
+        "ability": {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        },
+        "is_hidden": false,
+        "slot": 1
+      },
+      {
+        "ability": {
+          "name": "chlorophyll",
+          "url": "https://pokeapi.co/api/v2/ability/34/"
+        },
+        "is_hidden": true,
+        "slot": 3
+      }
+    ],
     id: 5
   },{
     name: "Bulbasaur",
@@ -234,6 +324,24 @@ export const PokemonData = () => {
     ],
     types: [
       "grass", "poison"
+    ],
+    abilities: [
+      {
+        "ability": {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        },
+        "is_hidden": false,
+        "slot": 1
+      },
+      {
+        "ability": {
+          "name": "chlorophyll",
+          "url": "https://pokeapi.co/api/v2/ability/34/"
+        },
+        "is_hidden": true,
+        "slot": 3
+      }
     ],
     id: 6
   },{
@@ -274,6 +382,24 @@ export const PokemonData = () => {
     types: [
       "grass", "poison"
     ],
+    abilities: [
+      {
+        "ability": {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        },
+        "is_hidden": false,
+        "slot": 1
+      },
+      {
+        "ability": {
+          "name": "chlorophyll",
+          "url": "https://pokeapi.co/api/v2/ability/34/"
+        },
+        "is_hidden": true,
+        "slot": 3
+      }
+    ],
     id: 7
   },{
     name: "Bulbasaur",
@@ -313,6 +439,24 @@ export const PokemonData = () => {
     types: [
       "grass", "poison"
     ],
+    abilities: [
+      {
+        "ability": {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        },
+        "is_hidden": false,
+        "slot": 1
+      },
+      {
+        "ability": {
+          "name": "chlorophyll",
+          "url": "https://pokeapi.co/api/v2/ability/34/"
+        },
+        "is_hidden": true,
+        "slot": 3
+      }
+    ],
     id: 8
   },{
     name: "Bulbasaur",
@@ -351,6 +495,24 @@ export const PokemonData = () => {
     ],
     types: [
       "grass", "poison"
+    ],
+    abilities: [
+      {
+        "ability": {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        },
+        "is_hidden": false,
+        "slot": 1
+      },
+      {
+        "ability": {
+          "name": "chlorophyll",
+          "url": "https://pokeapi.co/api/v2/ability/34/"
+        },
+        "is_hidden": true,
+        "slot": 3
+      }
     ],
     id: 9
   }]);

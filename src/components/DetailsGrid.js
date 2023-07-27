@@ -5,6 +5,7 @@ import { Link as PageLink, useParams } from 'react-router-dom';
 import { PokemonData } from '../constants/PokemonData';
 import { getTypeColor } from '../utils/getTypeColor';
 import { StatGraph } from './StatGraph';
+import { Abilities } from './Abilities';
 
 
 export const DetailsGrid = ({ idPokemon }) => {
@@ -53,12 +54,15 @@ export const DetailsGrid = ({ idPokemon }) => {
           >{type}</Tag>
         })}
       </ListItem>
-      <ListItem width="100%" >
+      <ListItem width="100%"  >
         image src:<br />
         {thisPokemon.image.toString()}
       </ListItem>
-      <ListItem width="100%" >
-        <StatGraph data ={thisPokemon}></StatGraph>
+      <ListItem width="100%" margin="auto" >
+        <Abilities thisPokemon ={thisPokemon}></Abilities>
+      </ListItem>
+      <ListItem width="50%" margin="auto" >
+        <StatGraph thisPokemon ={thisPokemon}></StatGraph>
       </ListItem>
       <ListItem
         height="40px"
