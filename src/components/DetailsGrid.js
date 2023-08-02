@@ -6,6 +6,8 @@ import { PokemonData } from '../constants/PokemonData';
 import { getTypeColor } from '../utils/getTypeColor';
 import { StatGraph } from './StatGraph';
 import { Abilities } from './Abilities';
+import { Sprites } from './Sprites';
+import { PokemonInfo } from './PokemonInfo';
 
 
 export const DetailsGrid = ({ idPokemon }) => {
@@ -22,9 +24,9 @@ export const DetailsGrid = ({ idPokemon }) => {
       fontSize="2xl"
       margin="0px"
     >
-      <ListItem 
-      width="50%"
-      margin="auto">
+      <ListItem
+        width="50%"
+        margin="auto">
         <Image
           boxSize='100%'
           src={thisPokemon.image}
@@ -36,16 +38,13 @@ export const DetailsGrid = ({ idPokemon }) => {
         />
       </ListItem>
 
-      <ListItem width="100%"  >
+      <ListItem width="50%" margin="auto" textAlign="center">
         {thisPokemon.id}. {thisPokemon.name}
       </ListItem>
-      <ListItem
-      
-      margin="auto"
+      <ListItem width="50%" margin="auto"
       >
         Type(s):
         {thisPokemon.types.map((type, index) => {
-
           return <Tag
             justifyContent="center"
             minWidth="30%"
@@ -54,15 +53,21 @@ export const DetailsGrid = ({ idPokemon }) => {
           >{type}</Tag>
         })}
       </ListItem>
-      <ListItem width="100%"  >
+      <ListItem width="50%" margin="auto" fontSize="14px" >
         image src:<br />
         {thisPokemon.image.toString()}
       </ListItem>
-      <ListItem width="100%" margin="auto" >
-        <Abilities thisPokemon ={thisPokemon}></Abilities>
+      <ListItem width="50%" margin="auto" >
+        <Abilities thisPokemon={thisPokemon}></Abilities>
       </ListItem>
       <ListItem width="50%" margin="auto" >
-        <StatGraph thisPokemon ={thisPokemon}></StatGraph>
+        <StatGraph thisPokemon={thisPokemon}></StatGraph>
+      </ListItem>
+      <ListItem width="40%" margin="auto" >
+        <Sprites thisPokemon={thisPokemon}></Sprites>
+      </ListItem>
+      <ListItem width="50%" margin="auto" textAlign="center" >
+        <PokemonInfo thisPokemon={thisPokemon} />
       </ListItem>
       <ListItem
         height="40px"
