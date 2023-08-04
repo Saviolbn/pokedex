@@ -17,6 +17,8 @@ export const Abilities = ({ thisPokemon }) => {
       {Array1.map((ability, index) => {
 
         return <Tag
+          padding="6px"
+          verticalAlign="middle"
           justifyContent="center"
           minWidth="30%"
           backgroundColor="white"

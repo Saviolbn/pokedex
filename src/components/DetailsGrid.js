@@ -28,6 +28,7 @@ export const DetailsGrid = ({ idPokemon }) => {
         width="50%"
         margin="auto">
         <Image
+          title={`image src: ${thisPokemon.image.toString()}`}
           boxSize='100%'
           src={thisPokemon.image}
           css={`
@@ -41,21 +42,22 @@ export const DetailsGrid = ({ idPokemon }) => {
       <ListItem width="50%" margin="auto" textAlign="center">
         {thisPokemon.id}. {thisPokemon.name}
       </ListItem>
+      <ListItem width="50%" margin="auto" textAlign="center" >
+        <PokemonInfo thisPokemon={thisPokemon} />
+      </ListItem>
       <ListItem width="50%" margin="auto"
       >
         Type(s):
         {thisPokemon.types.map((type, index) => {
           return <Tag
+            padding="6px"
+            verticalAlign="middle"
             justifyContent="center"
             minWidth="30%"
             backgroundColor={getTypeColor(type)}
             key={`${thisPokemon.id}${type}`}
           >{type}</Tag>
         })}
-      </ListItem>
-      <ListItem width="50%" margin="auto" fontSize="14px" >
-        image src:<br />
-        {thisPokemon.image.toString()}
       </ListItem>
       <ListItem width="50%" margin="auto" >
         <Abilities thisPokemon={thisPokemon}></Abilities>
@@ -66,9 +68,7 @@ export const DetailsGrid = ({ idPokemon }) => {
       <ListItem width="40%" margin="auto" >
         <Sprites thisPokemon={thisPokemon}></Sprites>
       </ListItem>
-      <ListItem width="50%" margin="auto" textAlign="center" >
-        <PokemonInfo thisPokemon={thisPokemon} />
-      </ListItem>
+
       <ListItem
         height="40px"
         display="flex"
